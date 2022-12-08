@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "author": "Sergio Lucas",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-s3-devkitc-1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 33.93,
+      "left": -74.21,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 102.66,
+      "left": -75.88,
+      "attrs": { "color": "blue" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:6", "led1:A", "red", [ "h0" ] ],
+    [ "esp:3", "led2:A", "red", [ "v0" ] ],
+    [ "esp:GND.1", "led1:C", "black", [ "h-101.43", "v-157.08" ] ],
+    [ "led2:C", "esp:GND.1", "black", [ "v-0.34", "h-35.48", "v87.45" ] ]
+  ]
+}
