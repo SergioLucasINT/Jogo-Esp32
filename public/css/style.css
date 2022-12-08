@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    display: block;
+    user-select: none;
+}
+
+#game-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#red-side {
+    background-color: red;
+    height: 100%;
+    width: 50%;
+}
+
+#red-side h1,
+#blue-side h1 {
+    text-align: center;
+    font-size: 10em;
+    color: white;
+}
+
+#blue-side {
+    background-color: blue;
+    height: 100%;
+    width: 50%;
+}
